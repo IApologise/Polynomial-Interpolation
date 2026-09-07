@@ -37,8 +37,11 @@ while True:
         continue
 
     # Checking if 2D
-    if len(coordinates) != 2:
-        print("\nToo many inputs were given. Only 2 are needed, X and Y.")
+    if len(coordinates) > 2:
+        print("\nToo many inputs were given. Exactly 2 are needed, X and Y.")
+        continue
+    elif len(coordinates) < 2:
+        print("\nToo little inputs were given. Exactly 2 are needed, X and Y.")
         continue
 
     points.append(coordinates)  # Registering coordinates
@@ -126,5 +129,4 @@ print(result)  # Print
 
 # Exiting the program
 print("Press ENTER to leave.")
-input(">>> ")
 exit()
